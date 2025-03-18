@@ -1,0 +1,231 @@
+{
+  "$schema": "https://sap.github.io/open-resource-discovery/spec-v1/interfaces/Document.schema.json",
+  "openResourceDiscovery": "1.9",
+  "policyLevel": "none",
+  "description": "this is an application description",
+  "products": [
+    {
+      "ordId": "customer:product:capire.bookshop:",
+      "title": "capire bookshop",
+      "shortDescription": "Description for capire bookshop",
+      "vendor": "customer:vendor:customer:"
+    }
+  ],
+  "groups": [
+    {
+      "groupId": "sap.cds:service:customer.capirebookshop:AdminService",
+      "groupTypeId": "sap.cds:service",
+      "title": "Admin Service"
+    },
+    {
+      "groupId": "sap.cds:service:customer.capirebookshop:CatalogService",
+      "groupTypeId": "sap.cds:service",
+      "title": "Catalog Service"
+    },
+    {
+      "groupId": "sap.cds:service:customer.capirebookshop:UserService",
+      "groupTypeId": "sap.cds:service",
+      "title": "User Service"
+    }
+  ],
+  "consumptionBundles": [
+    {
+      "ordId": "capirebookshop:consumptionBundle:noAuth:v1",
+      "version": "1.0.0",
+      "lastUpdate": "2025-03-18T04:15:17+01:00",
+      "title": "Unprotected resources",
+      "shortDescription": "If we have another protected API then it will be another object",
+      "description": "This Consumption Bundle contains all resources of the reference app which are unprotected and do not require authentication"
+    }
+  ],
+  "packages": [
+    {
+      "ordId": "customer.capirebookshop:package:capirebookshop:v1",
+      "title": "capire bookshop",
+      "shortDescription": "Short description for capire bookshop",
+      "description": "Description for capire bookshop",
+      "version": "1.0.0",
+      "partOfProducts": [
+        "customer:product:capire.bookshop:"
+      ],
+      "vendor": "customer:vendor:Customer:"
+    }
+  ],
+  "apiResources": [
+    {
+      "ordId": "customer.capirebookshop:apiResource:AdminService:v1",
+      "title": "AdminService",
+      "shortDescription": "Short description for AdminService",
+      "description": "Description for AdminService",
+      "version": "1.0.0",
+      "lastUpdate": "2025-03-18T04:15:17+01:00",
+      "visibility": "public",
+      "partOfPackage": "customer.capirebookshop:package:capirebookshop:v1",
+      "partOfGroups": [
+        "sap.cds:service:customer.capirebookshop:AdminService"
+      ],
+      "releaseStatus": "active",
+      "apiProtocol": "odata-v4",
+      "resourceDefinitions": [
+        {
+          "type": "openapi-v3",
+          "mediaType": "application/json",
+          "url": "/.well-known/open-resource-discovery/v1/api-metadata/AdminService.oas3.json",
+          "accessStrategies": [
+            {
+              "type": "open"
+            }
+          ]
+        },
+        {
+          "type": "edmx",
+          "mediaType": "application/xml",
+          "url": "/.well-known/open-resource-discovery/v1/api-metadata/AdminService.edmx",
+          "accessStrategies": [
+            {
+              "type": "open"
+            }
+          ]
+        }
+      ],
+      "entryPoints": [
+        "/admin"
+      ],
+      "extensible": {
+        "supported": "no"
+      },
+      "entityTypeMappings": [
+        {
+          "entityTypeTargets": []
+        }
+      ]
+    },
+    {
+      "ordId": "customer.capirebookshop:apiResource:CatalogService:v1",
+      "title": "CatalogService",
+      "shortDescription": "Short description for CatalogService",
+      "description": "Description for CatalogService",
+      "version": "1.0.0",
+      "lastUpdate": "2025-03-18T04:15:17+01:00",
+      "visibility": "public",
+      "partOfPackage": "customer.capirebookshop:package:capirebookshop:v1",
+      "partOfGroups": [
+        "sap.cds:service:customer.capirebookshop:CatalogService"
+      ],
+      "releaseStatus": "active",
+      "apiProtocol": "odata-v4",
+      "resourceDefinitions": [
+        {
+          "type": "openapi-v3",
+          "mediaType": "application/json",
+          "url": "/.well-known/open-resource-discovery/v1/api-metadata/CatalogService.oas3.json",
+          "accessStrategies": [
+            {
+              "type": "open"
+            }
+          ]
+        },
+        {
+          "type": "edmx",
+          "mediaType": "application/xml",
+          "url": "/.well-known/open-resource-discovery/v1/api-metadata/CatalogService.edmx",
+          "accessStrategies": [
+            {
+              "type": "open"
+            }
+          ]
+        }
+      ],
+      "entryPoints": [
+        "/browse"
+      ],
+      "extensible": {
+        "supported": "no"
+      },
+      "entityTypeMappings": [
+        {
+          "entityTypeTargets": []
+        }
+      ]
+    },
+    {
+      "ordId": "customer.capirebookshop:apiResource:UserService:v1",
+      "title": "UserService",
+      "shortDescription": "Short description for UserService",
+      "description": "Description for UserService",
+      "version": "1.0.0",
+      "lastUpdate": "2025-03-18T04:15:17+01:00",
+      "visibility": "public",
+      "partOfPackage": "customer.capirebookshop:package:capirebookshop:v1",
+      "partOfGroups": [
+        "sap.cds:service:customer.capirebookshop:UserService"
+      ],
+      "releaseStatus": "active",
+      "apiProtocol": "odata-v4",
+      "resourceDefinitions": [
+        {
+          "type": "openapi-v3",
+          "mediaType": "application/json",
+          "url": "/.well-known/open-resource-discovery/v1/api-metadata/UserService.oas3.json",
+          "accessStrategies": [
+            {
+              "type": "open"
+            }
+          ]
+        },
+        {
+          "type": "edmx",
+          "mediaType": "application/xml",
+          "url": "/.well-known/open-resource-discovery/v1/api-metadata/UserService.edmx",
+          "accessStrategies": [
+            {
+              "type": "open"
+            }
+          ]
+        }
+      ],
+      "entryPoints": [
+        "/user"
+      ],
+      "extensible": {
+        "supported": "no"
+      },
+      "entityTypeMappings": [
+        {
+          "entityTypeTargets": []
+        }
+      ]
+    }
+  ],
+  "eventResources": [
+    {
+      "ordId": "customer.capirebookshop:eventResource:CatalogService:v1",
+      "title": "ODM capirebookshop Events",
+      "shortDescription": "CatalogService event resource",
+      "description": "CAP Event resource describing events / messages.",
+      "version": "1.0.0",
+      "lastUpdate": "2025-03-18T04:15:17+01:00",
+      "releaseStatus": "active",
+      "partOfPackage": "customer.capirebookshop:package:capirebookshop:v1",
+      "partOfGroups": [
+        "sap.cds:service:customer.capirebookshop:CatalogService"
+      ],
+      "visibility": "public",
+      "resourceDefinitions": [
+        {
+          "type": "asyncapi-v2",
+          "mediaType": "application/json",
+          "url": "/.well-known/open-resource-discovery/v1/api-metadata/CatalogService.asyncapi2.json",
+          "accessStrategies": [
+            {
+              "type": "open"
+            }
+          ]
+        }
+      ],
+      "extensible": {
+        "supported": "no"
+      }
+    }
+  ]
+}

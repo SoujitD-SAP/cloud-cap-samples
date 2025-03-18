@@ -7,17 +7,26 @@
     "index.cds"
   ],
   "dependencies": {
+    "@cap-js/ord": "^1.2.0",
     "@sap/cds": ">=5",
     "express": "^4.17.1"
   },
   "cds": {
     "requires": {
       "messaging": {
-        "[development]": { "kind": "file-based-messaging" },
-        "[hybrid]": { "kind": "enterprise-messaging-shared" },
-        "[production]": { "kind": "enterprise-messaging" }
+        "[development]": {
+          "kind": "file-based-messaging"
+        },
+        "[hybrid]": {
+          "kind": "enterprise-messaging-shared"
+        },
+        "[production]": {
+          "kind": "enterprise-messaging"
+        }
       },
-      "db": { "kind": "sql" }
+      "db": {
+        "kind": "sql"
+      }
     }
   }
 }

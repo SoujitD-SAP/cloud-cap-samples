@@ -1,4 +1,7 @@
 const cds = require('@sap/cds')
+require("@cap-js/ord");
+const csn = cds.context?.model || cds.model;
+const ord = cds.compile.to.ord(csn);
 
 class CatalogService extends cds.ApplicationService { init() {
 
